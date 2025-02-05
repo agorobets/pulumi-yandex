@@ -9,7 +9,7 @@
     "license": "Apache-2.0",
     "attribution": "This Pulumi package is based on the [`yandex` Terraform Provider](https://github.com/yandex-cloud/terraform-provider-yandex).",
     "repository": "https://github.com/agorobets/pulumi-yandex",
-    "pluginDownloadURL": "https://github.com/agorobets/pulumi-yandex/releases",
+    "pluginDownloadURL": "https://github.com/agorobets/pulumi-yandex/releases/download/v${VERSION}/",
     "publisher": "Agorobets",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"

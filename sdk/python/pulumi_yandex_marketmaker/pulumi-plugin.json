@@ -2,5 +2,5 @@
   "resource": true,
   "name": "yandex",
   "version": "1.0.0-alpha.0+dev",
-  "server": "https://github.com/agorobets/pulumi-yandex/releases"
+  "server": "https://github.com/agorobets/pulumi-yandex/releases/download/v${VERSION}/"
 }
