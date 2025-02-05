@@ -111,37 +111,40 @@ jobs:
     - name: Setup tools
       uses: ./.github/actions/setup-tools
       with:
-        tools: pulumictl, pulumicli, dotnet, go, nodejs, python
-    - name: Publish SDKs
-      if: inputs.skipJavaSdk == false
-      uses: pulumi/pulumi-package-publisher@696a0fe98f86d86ada2a842d1859f3e8c40d6cd7 # v0.0.21
-      with:
-        sdk: all,!java
-        version: ${{ inputs.version }}
+        tools: pulumictl, pulumicli, python
+        # tools: pulumictl, pulumicli, dotnet, go, nodejs, python
+    # - name: Publish SDKs
+    #   if: inputs.skipJavaSdk == false
+    #   uses: pulumi/pulumi-package-publisher@696a0fe98f86d86ada2a842d1859f3e8c40d6cd7 # v0.0.21
+    #   with:
+    #     sdk: python
+    #     # sdk: all,!java
+    #     version: ${{ inputs.version }}
     - name: Publish SDKs (except Java)
       if: inputs.skipJavaSdk == true
       uses: pulumi/pulumi-package-publisher@696a0fe98f86d86ada2a842d1859f3e8c40d6cd7 # v0.0.21
       with:
-        sdk: all,!java,!java
+        sdk: python
+        # sdk: all,!java,!java
         version: ${{ inputs.version }}
-    - name: Download Go SDK
-      uses: ./.github/actions/download-sdk
-      with:
-        language: go
-    - uses: pulumi/publish-go-sdk-action@v1
-      if: inputs.skipGoSdk == false
-      with:
-        repository: ${{ github.repository }}
-        base-ref: ${{ github.sha }}
-        source: sdk
-        path: sdk
-        version: ${{ inputs.version }}
-        additive: false
-        # Avoid including other language SDKs & artifacts in the commit
-        files: |
-          go.*
-          go/**
-          !*.tar.gz
+    # - name: Download Go SDK
+    #   uses: ./.github/actions/download-sdk
+    #   with:
+    #     language: go
+    # - uses: pulumi/publish-go-sdk-action@v1
+    #   if: inputs.skipGoSdk == false
+    #   with:
+    #     repository: ${{ github.repository }}
+    #     base-ref: ${{ github.sha }}
+    #     source: sdk
+    #     path: sdk
+    #     version: ${{ inputs.version }}
+    #     additive: false
+    #     # Avoid including other language SDKs & artifacts in the commit
+    #     files: |
+    #       go.*
+    #       go/**
+    #       !*.tar.gz
     - name: Extract python version
       id: python_version
       working-directory: sdk/python
