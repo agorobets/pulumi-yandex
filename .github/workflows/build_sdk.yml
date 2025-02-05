@@ -38,9 +38,9 @@ jobs:
       fail-fast: ${{ ! contains(github.actor, 'renovate') }}
       matrix:
         language:
-        - dotnet
-        - go
-        - nodejs
+        # - dotnet
+        # - go
+        # - nodejs
         - python
     steps:
       - name: Checkout Repo
