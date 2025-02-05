@@ -20,10 +20,11 @@ import (
 	// Allow embedding bridge-metadata.json in the provider.
 	_ "embed"
 
+	"github.com/yandex-cloud/terraform-provider-yandex/yandex" // Import the upstream provider
+
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/yandex-cloud/terraform-provider-yandex/yandex" // Import the upstream provider
 
 	"github.com/agorobets/pulumi-yandex/provider/pkg/version"
 )
