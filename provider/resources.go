@@ -23,8 +23,7 @@ import (
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
-	yandex "github.com/yandex-cloud/terraform-provider-yandex/provider" // Import the upstream provider
+	"github.com/yandex-cloud/terraform-provider-yandex/yandex" // Import the upstream provider
 
 	"github.com/agorobets/pulumi-yandex/provider/pkg/version"
 )
@@ -105,7 +104,7 @@ func Provider() tfbridge.ProviderInfo {
 		// - "github.com/hashicorp/terraform-plugin-framework/provider".Provider (for plugin-framework)
 		//
 		//nolint:lll
-		P: shimv2.NewProvider(yandex.New(version.Version)()),
+		P: shimv2.NewProvider(yandex.NewSDKProvider()),
 
 		Name:    "yandex",
 		Version: version.Version,
@@ -114,7 +113,7 @@ func Provider() tfbridge.ProviderInfo {
 		DisplayName: "",
 		// Change this to your personal name (or a company name) that you would like to be shown in
 		// the Pulumi Registry if this package is published there.
-		Publisher: "Pulumi",
+		Publisher: "Agorobets",
 		// LogoURL is optional but useful to help identify your package in the Pulumi Registry
 		// if this package is published there.
 		//
@@ -124,7 +123,7 @@ func Provider() tfbridge.ProviderInfo {
 		// PluginDownloadURL is an optional URL used to download the Provider
 		// for use in Pulumi programs
 		// e.g. https://github.com/org/pulumi-provider-name/releases/download/v${VERSION}/
-		PluginDownloadURL: "",
+		PluginDownloadURL: "https://github.com/agorobets/pulumi-yandex/releases",
 		Description:       "A Pulumi package for creating and managing yandex cloud resources.",
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
@@ -135,27 +134,21 @@ func Provider() tfbridge.ProviderInfo {
 		Repository: "https://github.com/agorobets/pulumi-yandex",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this should
 		// match the TF provider module's require directive, not any replace directives.
-		GitHubOrg:    "",
+		GitHubOrg:    "yandex-cloud",
 		MetadataInfo: tfbridge.NewProviderMetadata(metadata),
-		Config: map[string]*tfbridge.SchemaInfo{
-			// Add any required configuration here, or remove the example below if
-			// no additional points are required.
-			"region": {
-				Type: "yandex:region/region:Region",
-			},
-		},
+		Config:       map[string]*tfbridge.SchemaInfo{},
 		// If extra types are needed for configuration, they can be added here.
-		ExtraTypes: map[string]schema.ComplexTypeSpec{
-			"yandex:region/region:Region": {
-				ObjectTypeSpec: schema.ObjectTypeSpec{
-					Type: "string",
-				},
-				Enum: []schema.EnumValueSpec{
-					{Name: "here", Value: "HERE"},
-					{Name: "overThere", Value: "OVER_THERE"},
-				},
-			},
-		},
+		// ExtraTypes: map[string]schema.ComplexTypeSpec{
+		// 	"yandex:region/region:Region": {
+		// 		ObjectTypeSpec: schema.ObjectTypeSpec{
+		// 			Type: "string",
+		// 		},
+		// 		Enum: []schema.EnumValueSpec{
+		// 			{Name: "here", Value: "HERE"},
+		// 			{Name: "overThere", Value: "OVER_THERE"},
+		// 		},
+		// 	},
+		// },
 		JavaScript: &tfbridge.JavaScriptInfo{
 			// RespectSchemaVersion ensures the SDK is generated linking to the correct version of the provider.
 			RespectSchemaVersion: true,
@@ -164,7 +157,8 @@ func Provider() tfbridge.ProviderInfo {
 			// RespectSchemaVersion ensures the SDK is generated linking to the correct version of the provider.
 			RespectSchemaVersion: true,
 			// Enable modern PyProject support in the generated Python SDK.
-			PyProject: struct{ Enabled bool }{true},
+			PyProject:   struct{ Enabled bool }{true},
+			PackageName: string("pulumi_yandex_marketmaker"),
 		},
 		Golang: &tfbridge.GolangInfo{
 			// Set where the SDK is going to be published to.

@@ -1,0 +1,779 @@
+{
+  "Initial": "AQAAAA7dVMFJONU2nwAA",
+  "Version": "0.2",
+  "Converter": {
+    "ScrubBody": null,
+    "ClearHeaders": [
+      "^X-Goog-.*Encryption-Key$",
+      "^X-Amz-Date$",
+      "^User-Agent$"
+    ],
+    "RemoveRequestHeaders": [
+      "^Authorization$",
+      "^Proxy-Authorization$",
+      "^Connection$",
+      "^Content-Type$",
+      "^Date$",
+      "^Host$",
+      "^Transfer-Encoding$",
+      "^Via$",
+      "^X-Forwarded-.*$",
+      "^X-Cloud-Trace-Context$",
+      "^X-Goog-Api-Client$",
+      "^X-Google-.*$",
+      "^X-Gfe-.*$",
+      "^Authorization$",
+      "^Duration$",
+      "^X-Amz-Security-Token$"
+    ],
+    "RemoveResponseHeaders": [
+      "^X-Google-.*$",
+      "^X-Gfe-.*$"
+    ],
+    "ClearParams": [
+      "^X-Amz-Date$"
+    ],
+    "RemoveParams": [
+      "^X-Amz-Credential$",
+      "^X-Amz-Signature$",
+      "^X-Amz-Security-Token$"
+    ]
+  },
+  "Entries": [
+    {
+      "ID": "ddd5ef6844c1a0c7",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "192"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.CreateSecret"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJDbGllbnRSZXF1ZXN0VG9rZW4iOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTQ3MmFiZDIyZDc5ZDA2MjAzZWQ3MWI4OTc5OWJlNmMzIiwiTmFtZSI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IiLCJTZWNyZXRCaW5hcnkiOiJXM3NpVG1GdFpTSTZJQ0pHYjI4aUxDQWlWR1Y0ZENJNklDSkNZWElpZlYwPSJ9"
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "221"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:45 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "b01d8357-9af5-4a92-8b59-91051cb5627d"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiTmFtZSI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IiLCJWZXJzaW9uSWQiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTQ3MmFiZDIyZDc5ZDA2MjAzZWQ3MWI4OTc5OWJlNmMzIn0="
+      }
+    },
+    {
+      "ID": "cdccee4befba615c",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.GetSecretValue"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "345"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:48 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "475c5142-596a-4c70-a1b6-c67bde1a960b"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTg2MTUyRTksIk5hbWUiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yIiwiU2VjcmV0QmluYXJ5IjoiVzNzaVRtRnRaU0k2SUNKR2IyOGlMQ0FpVkdWNGRDSTZJQ0pDWVhJaWZWMD0iLCJWZXJzaW9uSWQiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTQ3MmFiZDIyZDc5ZDA2MjAzZWQ3MWI4OTc5OWJlNmMzIiwiVmVyc2lvblN0YWdlcyI6WyJBV1NDVVJSRU5UIl19"
+      }
+    },
+    {
+      "ID": "87cc9c1dc27acc21",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.GetSecretValue"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "345"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:48 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "7925692c-3198-4340-8d41-3282f8bad2b3"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTg2MTUyRTksIk5hbWUiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yIiwiU2VjcmV0QmluYXJ5IjoiVzNzaVRtRnRaU0k2SUNKR2IyOGlMQ0FpVkdWNGRDSTZJQ0pDWVhJaWZWMD0iLCJWZXJzaW9uSWQiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTQ3MmFiZDIyZDc5ZDA2MjAzZWQ3MWI4OTc5OWJlNmMzIiwiVmVyc2lvblN0YWdlcyI6WyJBV1NDVVJSRU5UIl19"
+      }
+    },
+    {
+      "ID": "786b60f1be1447ba",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.DescribeSecret"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "343"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:48 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "42882419-0684-496b-a9ce-25d55780a652"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTg2MTI3RTksIkxhc3RBY2Nlc3NlZERhdGUiOjEuNzA3MjY0RTksIkxhc3RDaGFuZ2VkRGF0ZSI6MS43MDcyNjQ1ODYxNTZFOSwiTmFtZSI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IiLCJWZXJzaW9uSWRzVG9TdGFnZXMiOnsidGVzdC11cGRhdGluZy12YXJpYWJsZS10by1lcnJvci00NzJhYmQyMmQ3OWQwNjIwM2VkNzFiODk3OTliZTZjMyI6WyJBV1NDVVJSRU5UIl19fQ=="
+      }
+    },
+    {
+      "ID": "457a240b6254a365",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "168"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.PutSecretValue"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJDbGllbnRSZXF1ZXN0VG9rZW4iOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTcwNWQxMTYxMDhjNmJmYzlkMThlMjUyNmQwODlkNmMxIiwiU2VjcmV0QmluYXJ5IjoiYVc1MllXeHBaQzFxYzI5dSIsIlNlY3JldElkIjoidGVzdC11cGRhdGluZy12YXJpYWJsZS10by1lcnJvciJ9"
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "252"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:48 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "4c1faeb4-a43b-4ee8-b942-c4fa032e68fa"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiTmFtZSI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IiLCJWZXJzaW9uSWQiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTcwNWQxMTYxMDhjNmJmYzlkMThlMjUyNmQwODlkNmMxIiwiVmVyc2lvblN0YWdlcyI6WyJBV1NDVVJSRU5UIl19"
+      }
+    },
+    {
+      "ID": "502092143e19c58b",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.GetSecretValue"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "317"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:51 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "1672b19d-431d-4b59-b8d3-d95a6f6f20e5"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTg5NTA5RTksIk5hbWUiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yIiwiU2VjcmV0QmluYXJ5IjoiYVc1MllXeHBaQzFxYzI5dSIsIlZlcnNpb25JZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItNzA1ZDExNjEwOGM2YmZjOWQxOGUyNTI2ZDA4OWQ2YzEiLCJWZXJzaW9uU3RhZ2VzIjpbIkFXU0NVUlJFTlQiXX0="
+      }
+    },
+    {
+      "ID": "1d15183f02052740",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.GetSecretValue"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "317"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:51 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "3d5e7156-d502-4ad3-ac76-7ac119a7bb93"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTg5NTA5RTksIk5hbWUiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yIiwiU2VjcmV0QmluYXJ5IjoiYVc1MllXeHBaQzFxYzI5dSIsIlZlcnNpb25JZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItNzA1ZDExNjEwOGM2YmZjOWQxOGUyNTI2ZDA4OWQ2YzEiLCJWZXJzaW9uU3RhZ2VzIjpbIkFXU0NVUlJFTlQiXX0="
+      }
+    },
+    {
+      "ID": "039b5f8732a0f15e",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.DescribeSecret"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "426"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:51 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "c8dd3d84-773e-428c-ba35-c2890499afa1"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTg2MTI3RTksIkxhc3RBY2Nlc3NlZERhdGUiOjEuNzA3MjY0RTksIkxhc3RDaGFuZ2VkRGF0ZSI6MS43MDcyNjQ1ODk1MTJFOSwiTmFtZSI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IiLCJWZXJzaW9uSWRzVG9TdGFnZXMiOnsidGVzdC11cGRhdGluZy12YXJpYWJsZS10by1lcnJvci00NzJhYmQyMmQ3OWQwNjIwM2VkNzFiODk3OTliZTZjMyI6WyJBV1NQUkVWSU9VUyJdLCJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTcwNWQxMTYxMDhjNmJmYzlkMThlMjUyNmQwODlkNmMxIjpbIkFXU0NVUlJFTlQiXX19"
+      }
+    },
+    {
+      "ID": "b63eb4d6d559de7d",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "172"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.PutSecretValue"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJDbGllbnRSZXF1ZXN0VG9rZW4iOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTY0NTVhNzI4OWQ4NjY0NGU3OTBiYTU5NjJiNDE2MTEwIiwiU2VjcmV0QmluYXJ5IjoiYVc1MllXeHBaQzFxYzI5dU1nPT0iLCJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "252"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:52 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "f46bd281-b4d0-4fca-8e53-c556d1438d83"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiTmFtZSI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IiLCJWZXJzaW9uSWQiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTY0NTVhNzI4OWQ4NjY0NGU3OTBiYTU5NjJiNDE2MTEwIiwiVmVyc2lvblN0YWdlcyI6WyJBV1NDVVJSRU5UIl19"
+      }
+    },
+    {
+      "ID": "7beba2dd2dfdc120",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.GetSecretValue"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "321"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:55 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "30db7117-2727-4072-9dd1-08381a2e7c04"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTkyODM1RTksIk5hbWUiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yIiwiU2VjcmV0QmluYXJ5IjoiYVc1MllXeHBaQzFxYzI5dU1nPT0iLCJWZXJzaW9uSWQiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTY0NTVhNzI4OWQ4NjY0NGU3OTBiYTU5NjJiNDE2MTEwIiwiVmVyc2lvblN0YWdlcyI6WyJBV1NDVVJSRU5UIl19"
+      }
+    },
+    {
+      "ID": "53ce10cf431f2740",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.GetSecretValue"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "321"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:55 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "158938a0-ca46-4b47-8b0a-afa5fc697184"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTkyODM1RTksIk5hbWUiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yIiwiU2VjcmV0QmluYXJ5IjoiYVc1MllXeHBaQzFxYzI5dU1nPT0iLCJWZXJzaW9uSWQiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTY0NTVhNzI4OWQ4NjY0NGU3OTBiYTU5NjJiNDE2MTEwIiwiVmVyc2lvblN0YWdlcyI6WyJBV1NDVVJSRU5UIl19"
+      }
+    },
+    {
+      "ID": "6c7ed7ba07de2119",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.DescribeSecret"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "426"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:55 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "2b515a1a-5568-4453-b203-ba257bc42017"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTg2MTI3RTksIkxhc3RBY2Nlc3NlZERhdGUiOjEuNzA3MjY0RTksIkxhc3RDaGFuZ2VkRGF0ZSI6MS43MDcyNjQ1OTI4MzlFOSwiTmFtZSI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IiLCJWZXJzaW9uSWRzVG9TdGFnZXMiOnsidGVzdC11cGRhdGluZy12YXJpYWJsZS10by1lcnJvci02NDU1YTcyODlkODY2NDRlNzkwYmE1OTYyYjQxNjExMCI6WyJBV1NDVVJSRU5UIl0sInRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItNzA1ZDExNjEwOGM2YmZjOWQxOGUyNTI2ZDA4OWQ2YzEiOlsiQVdTUFJFVklPVVMiXX19"
+      }
+    },
+    {
+      "ID": "8babff51bb0a28b1",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "80"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.DeleteSecret"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJGb3JjZURlbGV0ZVdpdGhvdXRSZWNvdmVyeSI6dHJ1ZSwiU2VjcmV0SWQiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yIn0="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "174"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:55 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "434cee0a-f3a4-47a2-a19d-a9ca63845d48"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiRGVsZXRpb25EYXRlIjoxLjcwNzI2NDU5NjEyOUU5LCJOYW1lIjoidGVzdC11cGRhdGluZy12YXJpYWJsZS10by1lcnJvciJ9"
+      }
+    },
+    {
+      "ID": "28e1c461bc3aefa4",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.DescribeSecret"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 200,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "457"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:58 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "fc574671-fb71-4444-a7fe-88dadf29ccfd"
+          ]
+        },
+        "Body": "eyJBUk4iOiJhcm46YXdzOnNlY3JldHNtYW5hZ2VyOnVzLWVhc3QtMjo0NjIzODAyMjU3MjI6c2VjcmV0OnRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItRkZUTGFwIiwiQ3JlYXRlZERhdGUiOjEuNzA3MjY0NTg2MTI3RTksIkRlbGV0ZWREYXRlIjoxLjcwNzI2NDU5NjEzOUU5LCJMYXN0QWNjZXNzZWREYXRlIjoxLjcwNzI2NEU5LCJMYXN0Q2hhbmdlZERhdGUiOjEuNzA3MjY0NTk2MTQ0RTksIk5hbWUiOiJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yIiwiVmVyc2lvbklkc1RvU3RhZ2VzIjp7InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3ItNjQ1NWE3Mjg5ZDg2NjQ0ZTc5MGJhNTk2MmI0MTYxMTAiOlsiQVdTQ1VSUkVOVCJdLCJ0ZXN0LXVwZGF0aW5nLXZhcmlhYmxlLXRvLWVycm9yLTcwNWQxMTYxMDhjNmJmYzlkMThlMjUyNmQwODlkNmMxIjpbIkFXU1BSRVZJT1VTIl19fQ=="
+      }
+    },
+    {
+      "ID": "e6281260ea0225d4",
+      "Request": {
+        "Method": "POST",
+        "URL": "https://secretsmanager.us-east-2.amazonaws.com/",
+        "Header": {
+          "Accept-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "46"
+          ],
+          "User-Agent": [
+            "CLEARED"
+          ],
+          "X-Amz-Date": [
+            "CLEARED"
+          ],
+          "X-Amz-Target": [
+            "secretsmanager.DescribeSecret"
+          ]
+        },
+        "MediaType": "application/x-amz-json-1.1",
+        "BodyParts": [
+          "eyJTZWNyZXRJZCI6InRlc3QtdXBkYXRpbmctdmFyaWFibGUtdG8tZXJyb3IifQ=="
+        ]
+      },
+      "Response": {
+        "StatusCode": 400,
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {
+          "Content-Length": [
+            "99"
+          ],
+          "Content-Type": [
+            "application/x-amz-json-1.1"
+          ],
+          "Date": [
+            "Wed, 07 Feb 2024 00:09:59 GMT"
+          ],
+          "X-Amzn-Requestid": [
+            "16718d9f-85e5-470d-b3a6-9c0703cf6398"
+          ]
+        },
+        "Body": "eyJfX3R5cGUiOiJSZXNvdXJjZU5vdEZvdW5kRXhjZXB0aW9uIiwiTWVzc2FnZSI6IlNlY3JldHMgTWFuYWdlciBjYW4ndCBmaW5kIHRoZSBzcGVjaWZpZWQgc2VjcmV0LiJ9"
+      }
+    }
+  ]
+}

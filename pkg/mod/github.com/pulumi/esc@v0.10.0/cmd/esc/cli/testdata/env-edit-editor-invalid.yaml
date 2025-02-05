@@ -1,0 +1,22 @@
+run: esc env edit default/test
+process:
+  environ:
+    EDITOR: my-editor
+  commands:
+    my-editor: |
+      echo -e "imports:\n" >$1
+environments:
+  test-user/default/test:
+    values:
+      foo: bar
+stdout: |
+  > esc env edit default/test
+stderr: |
+  > esc env edit default/test
+  Error: imports must be a list
+
+    on test line 1:
+     1: imports:
+
+  Press ENTER to continue editing or ^D to exit
+  Aborting edit.

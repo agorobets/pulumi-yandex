@@ -1,0 +1,42 @@
+before:
+  hooks:
+    - go mod download
+builds:
+- env:
+  - CGO_ENABLED=0
+  goos:
+    - darwin
+    - windows
+    - linux
+  goarch:
+    - amd64
+    - arm64
+  ldflags: -X github.com/pulumi/pulumictl/pkg/version.Version={{.Version}}
+  binary: pulumictl
+  main: ./cmd/pulumictl/main.go
+archives:
+- name_template: "{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
+  format_overrides:
+    - goos: windows
+      format: zip
+snapshot:
+  name_template: "{{ .Tag }}-SNAPSHOT"
+changelog:
+  skip: true
+release:
+  prerelease: auto
+brews:
+  -
+    name: pulumictl
+    tap:
+      owner: pulumi
+      name: homebrew-tap
+    commit_author:
+      name: pulumi-bot
+      email: bot@pulumi.com
+    homepage: "https://pulumi.io"
+    description: "A swiss army knife for Pulumi development"
+    folder: Formula
+    license: Apache-2.0
+    test: |
+      system "#{bin}/pulumictl version"

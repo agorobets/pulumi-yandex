@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    tags:
+      - "v*"
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: "30 10 * * 0"
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+        go-version:
+          - "1.14"
+          - "1.21"
+          - "1.22"
+          - "^1"
+        exclude:
+          # It seems MacOS 1.14 is no longer cached by actions/setup-go.
+          - os: macos-latest
+            go-version: "1.14"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v4
+        with:
+          go-version: ${{ matrix.go-version }}
+      - name: unit tests
+        run: go test -v -cover ./...
